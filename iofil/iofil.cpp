@@ -23,7 +23,7 @@ int main() {
 		if (baris == "q") break;
 		//menuliskan dan memesukan nilai dari'baris'ke dalam file
 		outfile << baris << endl;
-
+	}
 		//selesai dalam menulis sekarang tutup filenya
 		outfile.close();
 
@@ -32,7 +32,21 @@ int main() {
 		//menunjukan sebuah file
 		infile.open("contohfile.txr");
 
-	}
+		cout << endl << ">=memebuka dan membaca file" << endl;
+		//jika file ada maka
+		if (infile.is_open()) {
+			//melakukan perulangan setiap baris
+			while (getline(infile, baris))
+			{
+				//dan tampilkan disini
+				cout << baris << '\n';
+
+			}
+			//tutup fila tersebut setelah selesai
+			infile.close();
+		}
+	
+
 }
 
 
