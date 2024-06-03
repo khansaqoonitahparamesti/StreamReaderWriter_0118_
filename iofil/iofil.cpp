@@ -23,9 +23,12 @@ int main() {
 		if (baris == "q") break;
 		//menuliskan dan memesukan nilai dari'baris'ke dalam file
 		outfile << baris << endl;
-	}
-	
 
+		//selesai dalam menulis sekarang tutup filenya
+		outfile.close();
+
+
+	}
 }
 
 
